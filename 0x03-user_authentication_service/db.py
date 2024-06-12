@@ -46,7 +46,7 @@ class DB:
     def find_user_by(self, **kwargs) -> User:
         session = self._session
         try:
-            user = session.query(user).filter_by(**kwargs).one()
+            user = session.query(User).filter_by(**kwargs).one()
             return user
         except NoResultFound:
             raise NoResultFound()
