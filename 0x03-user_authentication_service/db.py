@@ -44,6 +44,9 @@ class DB:
         return new_user
 
     def find_user_by(self, **kwargs) -> User:
+        """ implement the find_user method that filters
+            out the first row based on the keyword args
+        """
         session = self._session
         try:
             user = session.query(User).filter_by(**kwargs).one()
@@ -52,4 +55,3 @@ class DB:
             raise NoResultFound()
         except InvalidRequestError:
             raise InvalidRequestError()
-
