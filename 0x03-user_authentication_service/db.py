@@ -41,10 +41,6 @@ class DB:
         session.add(new_user)
         session.commit()
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 29a38196f777a98caca75459ce25de2ff1533df8
         return new_user
 
     def find_user_by(self, **kwargs) -> User:
